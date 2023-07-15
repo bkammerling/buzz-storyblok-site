@@ -6,7 +6,7 @@ const Navigation = ({ blok }) => {
       <div className="container">
         <a className="navbar-brand" href="#">
           <img src="/images/logo-buzz-fire.jpeg" className="d-inline-block align-middle me-2" alt="" />
-          Buzz Fire & Security
+          <span className="d-none d-md-inline">Buzz Fire & Security</span>
         </a>
         <a type="button" className="btn btn-secondary" href="#contact">Contact me</a>
       </div>
