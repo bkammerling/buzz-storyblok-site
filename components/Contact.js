@@ -18,8 +18,8 @@ const Contact = ({ blok }) => {
                 <label htmlFor="name">Your name</label>
               </div>
               <div className="form-floating">
-                <textarea required class="form-control" id="form-message" rows="3" placeholder="Can you help me install some fire alarms..." style={{ height: '130px'}}></textarea>
-                <label htmlFor="form-message" class="form-label" name="message">Your message</label>
+                <textarea required className="form-control" id="form-message" rows="3" name="message" placeholder="Can you help me install some fire alarms..." style={{ height: '130px'}}></textarea>
+                <label htmlFor="form-message" className="form-label" >Your message</label>
               </div>
 
               <div className="alert alert-success mt-4" role="alert">
