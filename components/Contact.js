@@ -10,16 +10,16 @@ const Contact = ({ blok }) => {
           <div className="mt-3 mb-5 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
             <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
               <div className="form-floating mb-3">
-                <input required type="email" className="form-control" id="email" placeholder="name@example.com" />
+                <input required type="email" className="form-control" name="email" id="email" placeholder="name@example.com" />
                 <label htmlFor="email">Email address</label>
               </div>
               <div className="form-floating mb-3">
-                <input required type="text" className="form-control" id="name" placeholder="Example Smith" />
+                <input required type="text" className="form-control" name="name" id="name" placeholder="Example Smith" />
                 <label htmlFor="name">Your name</label>
               </div>
               <div className="form-floating">
                 <textarea required class="form-control" id="form-message" rows="3" placeholder="Can you help me install some fire alarms..." style={{ height: '130px'}}></textarea>
-                <label htmlFor="form-message" class="form-label">Your message</label>
+                <label htmlFor="form-message" class="form-label" name="message">Your message</label>
               </div>
 
               <div className="alert alert-success mt-4" role="alert">
@@ -44,9 +44,6 @@ const handleSubmit = (event) => {
 
   const myForm = event.target;
   const formData = new FormData(myForm);
-
-  alert('sent');
-  myForm.classList.add("sent")
   
   fetch("/", {
     method: "POST",
@@ -55,7 +52,7 @@ const handleSubmit = (event) => {
   })
     .then(() => myForm.classList.add("sent"))
     .catch((error) => alert(error));
-    
+
 };
 
 export default Contact;
