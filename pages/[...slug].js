@@ -27,16 +27,15 @@ export default function Page({ story }) {
 
 export async function getStaticProps({ params }) {
   let slug = params.slug ? params.slug.join("/") : "home";
-  let params = context.params || {};
+  let sbParams = context.params || {};
 
   if (context.preview) {
-    params.version = "draft"
-    params.cv = Date.now()
-    context.preview = true;
+    sbParams.version = "draft"
+    sbParams.cv = Date.now()
   }
 
   const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, params);
+  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
   return {
     props: {

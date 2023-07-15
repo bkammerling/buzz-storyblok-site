@@ -28,7 +28,6 @@ export async function getStaticProps(context) {
   if (context.preview) {
     params.version = "draft"
     params.cv = Date.now()
-    context.preview = true;
   }
 
   const storyblokApi = getStoryblokApi();
