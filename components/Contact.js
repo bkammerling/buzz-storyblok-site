@@ -8,7 +8,7 @@ const Contact = ({ blok }) => {
         <p className="mb-4">{ blok.subtitle }</p>
         <div className="row">
           <div className="mt-3 mb-5 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-            <form name="contact" method="POST" netlify>
+            <form name="contact" method="POST" data-netlify="true" >
               <div className="form-floating mb-3">
                 <input required type="email" className="form-control" name="email" id="email" placeholder="name@example.com" />
                 <label htmlFor="email">Email address</label>
