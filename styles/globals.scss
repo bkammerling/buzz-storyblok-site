@@ -1,0 +1,27 @@
+// Custom Styles
+
+.navbar-brand {
+  img {
+    width: 85px;
+  }
+}
+
+.navbar {
+  background: url('/images/bee-tile-sm.jpg');
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url('/images/fire-escape-bg-image.jpeg') no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.contact {
+  background: url('/images/buzz-bee-bg.jpg');
+  background-size: cover;
+  min-height: 500px;
+}
+
+form:not(.sent) .alert-success {
+  display: none;
+}

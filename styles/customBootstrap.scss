@@ -1,0 +1,16 @@
+// Override bootstrap theme colours here:
+
+$theme-colors: (
+  'primary': #f7c033,
+  'secondary': #222222,
+  'success': #22e11c,
+  'info': #d9ff50,
+  'warning': #ffbe0b,
+  'danger': #ff0000,
+  'light': #f8f9fa,
+  'dark': #000103,
+);
+
+
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
