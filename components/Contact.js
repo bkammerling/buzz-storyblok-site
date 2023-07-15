@@ -48,8 +48,6 @@ const handleSubmit = (event) => {
   alert('sent');
   myForm.classList.add("sent")
   
-  /*
-
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -57,7 +55,7 @@ const handleSubmit = (event) => {
   })
     .then(() => myForm.classList.add("sent"))
     .catch((error) => alert(error));
-*/
+    
 };
 
 export default Contact;
