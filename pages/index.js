@@ -21,15 +21,18 @@ export default function Home({ story }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
   let slug = "home";
+  let params = context.params || {};
 
-  let sbParams = {
-    version: "draft", // or 'published'
-  };
+  if (context.preview) {
+    params.version = "draft"
+    params.cv = Date.now()
+    context.preview = true;
+  }
 
   const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, params);
 
   return {
     props: {
